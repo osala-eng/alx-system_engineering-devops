@@ -1,5 +1,2 @@
-
-# -------------------------------------------------------------
-# Example File Format
-0       string	SCHOOL	School data
-!:mime  School
+0	string	SCHOOL	School data
+!:mime	School
