@@ -1,4 +1,5 @@
+
 # -------------------------------------------------------------
-# School magic file
-0       string  =SCHOOL   %s School data
-!:mime	School
+# Example File Format
+0       string	SCHOOL	School data
+!:mime  School
