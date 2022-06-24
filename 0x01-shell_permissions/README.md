@@ -1,11 +1,14 @@
 # Shell permissions
 
-`Hello world`
-
-![Screenshot](./0-iam_betty)
-
 ![Screenshot](./assets/rm01.png)
+# Task 0
+
 ![Screenshot](./assets/rm02.png)
+
+`#!/bin/bash`
+`su betty`
+
+# Task 1
 ![Screenshot](./assets/rm03.png)
 ![Screenshot](./assets/rm04.png)
 ![Screenshot](./assets/rm05.png)
