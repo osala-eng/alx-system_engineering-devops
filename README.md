@@ -1,4 +1,4 @@
-#ALX SYSTEM ENGINEERING DEVOPS
+# ALX SYSTEM ENGINEERING DEVOPS
 
 ![Screenshot](./0x00-shell_basics/assets/rmm00.png)
 
