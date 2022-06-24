@@ -157,10 +157,17 @@ ls -a -m --file-type
 # Task 19
 ![Screenshot](./assets/rm20.png)
 
+<h2>Create file named school with the following content</h2>
+
 ```magic
 0	string	SCHOOL	School data
 !:mime	School
 ```
 
+<h2>Use the following bash command to compile the file school to school.mgc</h2>
+
+```bash
+file -C -m school
+```
 
 
