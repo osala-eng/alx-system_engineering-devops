@@ -5,13 +5,19 @@
 
 ![Screenshot](./assets/rm02.png)
 
-```
+```bash
 #!/bin/bash
 su betty
 ```
 
 # Task 1
 ![Screenshot](./assets/rm03.png)
+
+```
+#!/bin/bash
+whoami
+```
+
 ![Screenshot](./assets/rm04.png)
 ![Screenshot](./assets/rm05.png)
 ![Screenshot](./assets/rm06.png)
