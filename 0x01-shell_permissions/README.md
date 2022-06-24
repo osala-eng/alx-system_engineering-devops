@@ -18,9 +18,25 @@ su betty
 whoami
 ```
 
+# Task 2
 ![Screenshot](./assets/rm04.png)
+
+```
+#!/bin/bash
+groups
+```
+
+# Task 3
 ![Screenshot](./assets/rm05.png)
+
+```
+#!/bin/bash
+chown betty hello
+```
+
+# Task 4
 ![Screenshot](./assets/rm06.png)
+
 ![Screenshot](./assets/rm07.png)
 ![Screenshot](./assets/rm08.png)
 ![Screenshot](./assets/rm09.png)
