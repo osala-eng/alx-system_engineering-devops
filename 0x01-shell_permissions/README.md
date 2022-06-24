@@ -5,8 +5,10 @@
 
 ![Screenshot](./assets/rm02.png)
 
-`#!/bin/bash`
-`su betty`
+```
+#!/bin/bash
+su betty
+```
 
 # Task 1
 ![Screenshot](./assets/rm03.png)
