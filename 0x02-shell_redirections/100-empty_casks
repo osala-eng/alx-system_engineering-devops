@@ -1,0 +1,2 @@
+#!/bin/bash
+find -empty -iname "*" | cut -c 3-
