@@ -98,7 +98,7 @@ echo $(($POWER / $DIVIDE))
 echo $(($BREATH ** $LOVE))
 ```
 
-<h3>11. Write a script that converts a number from base 2 to base 10.</h3>
+### 11. Write a script that converts a number from base 2 to base 10.
 
 <ul>
 <li>The number in base 2 is stored in the environment variable <code>BINARY</code></li>
@@ -117,7 +117,7 @@ julien@production-503e7013:~/$
 echo $((2#$BINARY))
 ```
 
-<p>12. Create a script that prints all possible combinations of two letters, except <code>oo</code>.</p>
+### 12. Create a script that prints all possible combinations of two letters, except <code>oo</code>.
 
 <ul>
 <li>Letters are lower cases, from <code>a</code> to <code>z</code></li>
