@@ -1,6 +1,6 @@
 <h1>Shell basics</h1>
 
-![Screenshot](./assets/rm00.png)
+![Screenshot](https://git-repo-docs.s3.us-east-2.amazonaws.com/0x00-shell/assets/rm00.png)
 
 # Task 0
 ![Screenshot](./assets/rm01.png)
