@@ -14,7 +14,7 @@ alias ls='rm *'
 
 # Task 1
 
-<h2>Create a script that prints `hello user`, where user is the current Linux user.</h2>
+<h2>Create a script that prints <em>hello user</em>, where user is the current Linux user.</h2>
 
 ```bash
 #!/bin/bash
