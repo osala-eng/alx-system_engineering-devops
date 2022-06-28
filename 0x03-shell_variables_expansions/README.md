@@ -98,49 +98,89 @@ echo $(($POWER / $DIVIDE))
 echo $(($BREATH ** $LOVE))
 ```
 
-# Task 11
+<div class="panel-body">
+    <span id="user_id" data-id="81664"></span>
+
+    <!-- Progress vs Score -->
+
+    <!-- Task Body -->
+    <p>Write a script that converts a number from base 2 to base 10.</p>
+
+<ul>
+<li>The number in base 2 is stored in the environment variable <code>BINARY</code></li>
+<li>The script should display the number in base 10, followed by a new line</li>
+</ul>
+
+<pre><code>julien@production-503e7013:~/$ export BINARY=10100111001
+julien@production-503e7013:~/$ ./11-binary_to_decimal
+1337
+julien@production-503e7013:~/$
+</code></pre>
+
+  </div>
 
 ```bash
 #!/bin/bash
 echo $((2#$BINARY))
 ```
 
-# Task 12
+<p>12. Create a script that prints all possible combinations of two letters, except <code>oo</code>.</p>
+
+<ul>
+<li>Letters are lower cases, from <code>a</code> to <code>z</code></li>
+<li>One combination per line</li>
+<li>The output should be alpha ordered, starting with <code>aa</code></li>
+<li>Do not print <code>oo</code></li>
+<li>Your script file should contain maximum 64 characters</li>
+</ul>
+
 
 ```bash
 #!/bin/bash
 echo {a..z}{a..z} | tr ' ' '\n' | grep -v 'oo'
 ```
 
-# Task 13
+<p>13. Write a script that prints a number with two decimal places, followed by a new line.</p>
+<p>The number will be stored in the environment variable <code>NUM</code>.</p>
 
 ```bash
 #!/bin/bash
 printf "%.2f\n" $NUM
 ```
 
-# Task 14
+<h3>14. Write a script that converts a number from base 10 to base 16.</h3>
+
+<ul>
+<li>The number in base 10 is stored in the environment variable <code>DECIMAL</code></li>
+<li>The script should display the number in base 16, followed by a new line</li>
+</ul>
 
 ```bash
 #!/bin/bash
 printf "%x\n" $DECIMAL
 ```
 
-# Task 15
+<h3>15. Write a script that encodes and decodes text using the rot13 encryption. Assume ASCII.</h3>
 
 ```bash
 #!/bin/bash
 tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 
-# Task 16
+<h3>16. Write a script that prints every other line from the input, starting with the first line.</h3>
 
 ```bash
 #!/bin/bash
 ls -1 | perl -ne 'print if $. % 2 == 1'
 ```
 
-# Task 17
+<h3>17. Write a shell script that adds the two numbers stored in the environment variables WATER and STIR and prints the result.</h3>
+
+<ul>
+<li>WATER is in base water</li>
+<li>STIR is in base stir.</li>
+<li>The result should be in base bestchol</li>
+</ul>
 
 ```bash
 ```
