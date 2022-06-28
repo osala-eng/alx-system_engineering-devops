@@ -47,36 +47,45 @@ set
 
 <h3>6. Create a script that creates a new local variable.</h3>
 
-<ul>Name: BEST</ul>
-<ul>Value: School</ul>
+`Name: BEST`<br>
+`Value: School`
 
 ```bash
 #!/bin/bash
 BEST=School
 ```
 
-# Task 7
+<h3> 7. Create a script that creates a new global variable.</h3>
+
+`Name: BEST`<br>
+`Value: School`
 
 ```bash
 #!/bin/bash
 export BEST=School
 ```
 
-# Task 8
+<h3>8. Write a script that prints the result of the addition of 128 with the value stored in the environment variable <em>TRUEKNOWLEDGE</em>, followed by a new line.</h3>
 
 ```bash
 #!/bin/bash
 echo $(($TRUEKNOWLEDGE + 128))
 ```
 
-# Task 9
+<h3>9. Write a script that prints the result of <em>POWER</em> divided by <em>DIVIDE</em>, followed by a new line.</h3>
+
+<h3><em>POWER</em> and <em>DIVIDE</em> are environment variables<h3>
 
 ```bash
 #!/bin/bash
 echo $(($POWER / $DIVIDE))
 ```
 
-# Task 10
+<h3>10. Write a script that displays the result of BREATH to the power LOVE</h3>
+<ul>
+<li><em>BREATH</em> and <em>LOVE</em> are environment variables</li>
+<li>The script should display the result, followed by a new line</li>
+</ul>
 
 ```bash
 #!/bin/bash
