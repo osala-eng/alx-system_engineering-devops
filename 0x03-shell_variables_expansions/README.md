@@ -2,8 +2,10 @@
 
 <h3>0. Create a script that creates an alias.</h3>
 
-`Name: ls`<br>
-`Value: rm *`
+<ul>
+<li>Name: ls</li>
+<li>Value: rm *</li>
+</ul>
 
 ```bash
 #!/bin/bash
@@ -47,8 +49,10 @@ set
 
 <h3>6. Create a script that creates a new local variable.</h3>
 
-`Name: BEST`<br>
-`Value: School`
+<ul>
+<li>Name: BEST</li>
+<li>Value: School</li>
+</ul>
 
 ```bash
 #!/bin/bash
@@ -57,8 +61,10 @@ BEST=School
 
 <h3> 7. Create a script that creates a new global variable.</h3>
 
-`Name: BEST`<br>
-`Value: School`
+<ul>
+<li>Name: BEST</li>
+<li>Value: School</li>
+</ul>
 
 ```bash
 #!/bin/bash
@@ -74,7 +80,7 @@ echo $(($TRUEKNOWLEDGE + 128))
 
 <h3>9. Write a script that prints the result of <em>POWER</em> divided by <em>DIVIDE</em>, followed by a new line.</h3>
 
-<h3><em>POWER</em> and <em>DIVIDE</em> are environment variables<h3>
+<ul><li><em>POWER</em> and <em>DIVIDE</em> are environment variables</li></ul>
 
 ```bash
 #!/bin/bash
