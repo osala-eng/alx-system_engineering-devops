@@ -98,26 +98,19 @@ echo $(($POWER / $DIVIDE))
 echo $(($BREATH ** $LOVE))
 ```
 
-<div class="panel-body">
-    <span id="user_id" data-id="81664"></span>
-
-    <!-- Progress vs Score -->
-
-    <!-- Task Body -->
-    <p>Write a script that converts a number from base 2 to base 10.</p>
+<h3>11. Write a script that converts a number from base 2 to base 10.</h3>
 
 <ul>
 <li>The number in base 2 is stored in the environment variable <code>BINARY</code></li>
 <li>The script should display the number in base 10, followed by a new line</li>
 </ul>
 
-<pre><code>julien@production-503e7013:~/$ export BINARY=10100111001
+```bash
+julien@production-503e7013:~/$ export BINARY=10100111001
 julien@production-503e7013:~/$ ./11-binary_to_decimal
 1337
 julien@production-503e7013:~/$
-</code></pre>
-
-  </div>
+```
 
 ```bash
 #!/bin/bash
@@ -133,7 +126,6 @@ echo $((2#$BINARY))
 <li>Do not print <code>oo</code></li>
 <li>Your script file should contain maximum 64 characters</li>
 </ul>
-
 
 ```bash
 #!/bin/bash
@@ -183,4 +175,5 @@ ls -1 | perl -ne 'print if $. % 2 == 1'
 </ul>
 
 ```bash
+
 ```
