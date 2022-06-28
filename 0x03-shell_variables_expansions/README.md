@@ -9,7 +9,8 @@
 
 ```bash
 #!/bin/bash
-alias ls='rm *'```
+alias ls='rm *'
+```
 
 # Task 1
 
@@ -17,5 +18,6 @@ alias ls='rm *'```
 
 ```bash
 #!/bin/bash
-echo "hello "$USER```
+echo "hello "$USER
+```
 
