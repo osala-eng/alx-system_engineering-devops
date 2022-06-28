@@ -106,12 +106,14 @@ echo $(($BREATH ** $LOVE))
 <li>The script should display the number in base 10, followed by a new line</li>
 </ul>
 
+<!--
 ```bash
 julien@production-503e7013:~/$ export BINARY=10100111001
 julien@production-503e7013:~/$ ./11-binary_to_decimal
 1337
 julien@production-503e7013:~/$
 ```
+-->
 
 ```bash
 #!/bin/bash
@@ -176,5 +178,6 @@ ls -1 | perl -ne 'print if $. % 2 == 1'
 </ul>
 
 ```bash
-
+#!/bin/bash
+printf "%o\n" $((5#`echo $WATER | tr 'water' '01234'` + 5#`echo $STIR | tr 'stir.' '01234'`)) | tr '01234567' 'bestchol'
 ```
