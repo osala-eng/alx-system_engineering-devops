@@ -2,7 +2,7 @@
 
 # Task 0
 
-<h2>Create a script that creates an alias.</h2>
+<h3>Create a script that creates an alias.</h3>
 
 `Name: ls`<br>
 `Value: rm *`
@@ -14,7 +14,7 @@ alias ls='rm *'
 
 # Task 1
 
-<h2>Create a script that prints <em>hello user</em>, where user is the current Linux user.</h2>
+<h3>Create a script that prints <em>hello user</em>, where user is the current Linux user.</h3>
 
 ```bash
 #!/bin/bash
