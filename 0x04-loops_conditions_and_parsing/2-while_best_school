@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# for loop in bash
+
+DISP_MSG="Best School"
+
+i=9
+while [ "$i" -ge 0 ]; do
+	echo -e "$DISP_MSG"
+	i="$((i-1))"
+done
