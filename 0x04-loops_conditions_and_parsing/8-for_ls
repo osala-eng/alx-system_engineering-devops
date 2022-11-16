@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# for loop in bash
+
+for file in *; do
+	echo -e "$file" | cut -d "-" -f2
+done 
