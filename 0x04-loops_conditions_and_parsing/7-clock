@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# for loop in bash
+
+i=0
+while [ "$i" -le 12 ]; do
+	echo -e "Hour: ${i}"
+	min=1
+	while [ "$min" -le 59 ]; do
+		echo -e "${min}"
+		min="$((min+1))"
+	done
+	i="$((i+1))"
+done
