@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# for loop in bash
+
+DISP_MSG="Best School"
+
+for i in {1..10}; do
+	[[ $((i)) ]] && echo -e "$DISP_MSG"
+done
