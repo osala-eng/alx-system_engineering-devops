@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# for loop in bash
+
+DISP_MSG="Best School"
+
+i=1
+while [ "$i" -le 10 ]; do
+	if [ "$i" -eq 4 ]; then
+		echo -e "bad luck"
+
+	elif [ "$i" -eq 8 ]; then
+		echo -e "good luck"
+
+	else
+		echo -e "$DISP_MSG"
+
+	fi
+	i="$((i+1))"
+done
