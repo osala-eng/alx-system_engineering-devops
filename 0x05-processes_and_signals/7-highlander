@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# I am unkillable
+
+MSG () {
+	echo -e "I am invincible!!!" 
+}
+
+trap "MSG" SIGTERM
+
+while true; do
+	echo -e "To infinity and beyond"
+	sleep 2
+done
