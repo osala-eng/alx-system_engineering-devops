@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# parse log for IP and HTTP
+
+FILE="apache-access.log"
+awk '{print $1, $9}' "$FILE" | sort | uniq -c | sort -nr
