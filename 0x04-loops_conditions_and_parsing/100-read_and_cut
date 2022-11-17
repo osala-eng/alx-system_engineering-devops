@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# for loop in bash
+
+FILE="/etc/passwd"
+
+while read -r line; do
+	echo -e "${line}" | cut -d ":" -f1,3,6
+done < $FILE
