@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# for loop in bash
+
+for i in {1..100}; do
+	if [ $((i%15)) -eq 0 ]; then
+	       echo -e "FizzBuzz"
+	       continue
+	fi
+
+	if [ $((i%5)) -eq 0 ]; then
+		echo -e "Buzz"
+		continue
+	fi
+
+	if [ $((i%3)) -eq 0 ]; then
+		echo -e "Fizz"
+		continue
+	fi
+
+	echo -e "${i}"
+done
