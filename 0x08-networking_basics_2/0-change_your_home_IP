@@ -16,14 +16,14 @@ cp "${HOST_FILE}" "${HOST_COPY}"
 cp "${HOST_FILE}" "${HOST_BAK}"
 
 # Find and replace all occurrences of localhost
-DONE=false
-for i in $(cat -n "${HOST_FILE}" | grep "${WILD_CARD}" | sed ${SED_TRIM} | cut -c 1-1); do
+DONE=0
+for i in $(cat -n "${HOST_FILE}" | grep "${WILD_CARD}" | sed 's/  \+ //' | cut -c 1-1); do
 	sed -i "${i}d" ${HOST_COPY}
 	sed -i "${i}i ${LOCAL_HOST}" "${HOST_COPY}"
 
 	# Add facebook only once 
-	[[ ! $DONE ]] && sed -i "$((i+1))i ${FACEBOOK}" "${HOST_COPY}"
-	DONE=true
+	[[ $DONE eq 0 ]] && sed -i "$((i+1))i ${FACEBOOK}" "${HOST_COPY}"
+	DONE=1
 done
 
 cp -f "${HOST_COPY}" "${HOST_FILE}"
