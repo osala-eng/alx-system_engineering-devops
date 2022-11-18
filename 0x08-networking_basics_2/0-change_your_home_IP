@@ -19,8 +19,8 @@ DONE=0
 
 cat -n "${HOST_FILE}" | grep "${WILD_CARD}" | sed 's/  \+ //' | cut -c 1-1 |
 while read -r i; do
-	sed -i "${i}d" ${HOST_COPY}
-	sed -i "${i}i ${LOCAL_HOST}" "${HOST_COPY}"
+	sed -i "$((i+DONE))d" ${HOST_COPY}
+	sed -i "$((i+DONE))i ${LOCAL_HOST}" "${HOST_COPY}"
 
 	# Add facebook only once 
 	[[ $DONE -eq 0 ]] && sed -i "$((i+1))i ${FACEBOOK}" "${HOST_COPY}"
