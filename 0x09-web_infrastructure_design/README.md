@@ -1,7 +1,7 @@
 # Web infrustructure design
 
 ## Simple web stack
-![SimpleWebStack](./assets/0i-simple_web_stack.png)
+![SimpleWebStack](./assets/0-simple_web_stack.png)
 
 ## Distributed web infrustructure
 ![Distributed](./assets/1-distributed_web_infrastructure.png)
