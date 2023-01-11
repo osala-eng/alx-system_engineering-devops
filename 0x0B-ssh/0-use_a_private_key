@@ -4,5 +4,6 @@
 
 SSH_PRIVATE_KEY="~/.ssh/school"
 SERVER_USER="ubuntu"
+HOST="54.87.172.232"
 
-ssh -i $SSH_PRIVATE_KEY "${SERVER_USER}@54.87.172.232"
+ssh -i $SSH_PRIVATE_KEY "${SERVER_USER}@${HOST}"
