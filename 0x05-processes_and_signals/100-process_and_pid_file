@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# I am unkillable
+
+PID_FILE="myscript"
+PID_DIR="/var/run"
+
+MSG_INT () {
+	echo -e "Y U no love me?!"
+}
+
+MSG_QUIT () {
+	rm -rf "${PID_DIR}/${PID_FILE}.pid"
+	echo -e "I hate the kill command"
+	exit 0
+}
+
+trap "MSG_INT" SIGINT
+trap "MSG_QUIT" SIGTERM
+trap "MSG_QUIT" SIGQUIT
+
+
+# Create the file
+echo $$ >> "${PID_DIR}/${PID_FILE}.pid"
+
+while true; do
+	echo -e "To infinity and beyond"
+	sleep 2
+done
