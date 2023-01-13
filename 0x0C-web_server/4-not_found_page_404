@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
+## Perform nginx server install and config
+./1-install_nginx_web_server
 # configure nginx server
 default_sites="/etc/nginx/sites-available/default"
 location=$(grep -Fn location $default_sites | head -1 | cut -d":" -f1)
-location_data="\\\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\n"
+location_data="\\\tlocation /redirect_me {\n\t\treturn 301 https://youtu.be/mlUOUncSaTk;\n\t}\n\n"
 error_page="\\\terror_page 404 /404.html;\n"
 
-## Perform nginx server install and config
-./1-install_nginx_web_server
+
 
 echo "Ceci n'est pas une page" | sudo tee "/var/www/html/404.html"
 
