@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Install nginix web server
+# Listen on port 80
+
+sudo apt-get -y update
+sudo apt-get -y install ngnix
+echo "Hello world" | sudo tee /usr/share/nginx/html/index.html
+sudo service nginx start
