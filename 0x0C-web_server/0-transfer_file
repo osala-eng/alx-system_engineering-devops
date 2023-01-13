@@ -8,6 +8,7 @@ IP="$2";
 USERNAME="$3";
 PATH_TO_SSH_KEY="$4";
 ERROR="Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY";
+HOST_KEY_RULE="StrictHostKeyChecking=no"
 
 if [ "$#" -lt 3 ]; then
 	echo -e "$ERROR";
@@ -15,8 +16,8 @@ if [ "$#" -lt 3 ]; then
 fi
 
 if [ "$#" -eq 3 ]; then
-	scp "$PATH_TO_FILE" "${USERNAME}@${IP}:~/"
+	scp -o "$HOST_KEY_RULE" "$PATH_TO_FILE" "${USERNAME}@${IP}:~/"
 	exit 0;
 fi
 
-scp -i "$PATH_TO_SSH_KEY" "$PATH_TO_FILE" "${USERNAME}@${IP}:~/";
+scp -o "$HOST_KEY_RULE" -i "$PATH_TO_SSH_KEY" "$PATH_TO_FILE" "${USERNAME}@${IP}:~/";
