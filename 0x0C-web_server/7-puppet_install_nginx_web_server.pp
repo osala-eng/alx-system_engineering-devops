@@ -13,17 +13,17 @@ package { 'nginx':
 }
 
 # Create a new index.html
-file { 'Index.html':
+file { 'Create index.html':
   require => Package['nginx'],
-  path    => '/var/www/index.html',
-  content => 'Hello World!'
+  path    => '/var/www/html/index.html',
+  content => 'Hello World!\n'
 }
 
 # Create a new error page
-file { '/var/www/404.html':
-  ensure  => file,
+file { 'Create 404.html':
   require => Package['nginx'],
-  content => 'Ceci n\'est pas une page'
+  path    => '/var/www/html/404.html',
+  content => 'Ceci n\'est pas une page\n'
 }
 
 # Replace default site config
