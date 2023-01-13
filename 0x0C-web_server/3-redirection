@@ -1,15 +1,12 @@
 #!/usr/bin/env bash
-
+# configure nginx server
 default_sites="/etc/nginx/sites-available/default"
 location=$(grep -Fn location $default_sites | head -1 | cut -d":" -f1)
 location_data="\\\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\n"
 
 ## Perform nginx server install and config
-sudo apt-get -y update
-sudo apt-get -y install nginx
-echo "Hello World!" | sudo tee /usr/share/nginx/html/index.html
-echo "Hello World!" | sudo tee /var/www/html/index*html
+./1-install_nginx_web_server
 
 ## Update default site to redirect and start nginx server
 sudo sed -i "${location}i ${location_data}" ${default_sites}
-sudo service nginx start
+sudo service nginx restart
