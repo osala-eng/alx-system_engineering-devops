@@ -45,7 +45,7 @@ server {
 
 	server_name _;
 	
-	add_header X-Served-By "x-serverd-by-hostname";
+	add_header X-Served-By "hostname";
 
 	error_page 404 /404.html;
 
