@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+## Perform haproxy loadbalancer install and config
+
+sudo apt-get -y update
+sudo apt-get -y install haproxy
+sudo service haproxy start
+
+lb1="listen lb"
+lb2="bind 0.0.0.0:80"
+lb3="mode http"
+lb4="balance roundrobin"
+lb5="option httpclose"
+lb6="option forwardfor"
+lb7="server 81664-web-01 52.87.232.70:80 check"
+lb8="server 81664-web-02 100.26.210.1:80 check"
+haproxy_default="/etc/default/haproxy"
+haproxy_cfg_file="/etc/haproxy/haproxy.cfg"
+s="\n\t"; e="\n";
+load_balancer_cfg="${lb1}${s}${lb2}${s}${lb3}${s}${lb4}${s}${lb5}${s}${lb6}${s}${lb7}${s}${lb8}${e}"
+
+## Set managable via inet script
+sudo sed -i "\$a ENABLED=1" "${haproxy_default}"
+
+## Append config setup
+sudo sed -i "\$a ${load_balancer_cfg}" "${haproxy_cfg_file}"
+
+## Start haproxy service
+sudo service haproxy restart

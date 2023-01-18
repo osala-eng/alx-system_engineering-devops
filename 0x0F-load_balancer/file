@@ -1,0 +1,19 @@
+name
+
+listen lb
+	bind 0.0.0.0:80
+	mode http
+	balance roundrobin
+	option forwardfor
+	server 81664-web-01 52.87.232.70:80 check
+	server 81664-web-02 100.26.210.1:80 check
+
+listen lb
+	bind 0.0.0.0:80
+	mode http
+	balance roundrobin
+	option httpclose
+	option forwardfor
+	server 81664-web-01 52.87.232.70:80 check
+	server 81664-web-02 100.26.210.1:80 check
+
