@@ -1,3 +1,4 @@
+include stdlib
 $default_site_loc = '/etc/nginx/sites-available/default'
 $default_site = 'https://raw.githubusercontent.com/osala-eng/alx-system_engineering-devops/master/0x0F-load_balancer/default-site'
 
@@ -32,12 +33,14 @@ file { '/etc/nginx/sites-available/default':
   require => Package['nginx']
 }-> exec { 'Replace config':
   command => "/usr/bin/curl ${default_site} > ${default_site_loc}"
-}-> exec { 'Add value of host name':
-  command => "/usr/bin/sed -i \"s/x-served-by-hostname/\$(hostname)/g" ${default_site_loc}"
+}-> file_line { 'Add value of host name':
+  path  => "${default_site_loc}",
+  line  => "\tadd_header X-Served-By \"${hostname}\";",
+  match => 'hostname',
 }
 
 # Start nginx service
 service { 'nginx':
   ensure  => running,
-  require => Exec['Add value of host name'],
+  require => File_line['Add value of host name'],
 }
