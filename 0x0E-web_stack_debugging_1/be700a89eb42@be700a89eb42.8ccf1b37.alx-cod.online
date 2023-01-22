@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# silently send sigup to nginx after config
+sudo sed -i 's/sites-default/sites-available/g' "/etc/nginx/nginx.conf"
+sudo kill -HUP "$(pgrep -f 'nginx: master')"
