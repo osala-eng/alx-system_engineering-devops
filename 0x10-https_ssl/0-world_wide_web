@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Display domain info in of a specific sub-domain
+# Output: The subdomain [SUB_DOMAIN] is a [RECORD_TYPE] record and points to [DESTINATION]
+
+domain="$1"; subdomain="$2";
+subs=("www" "lb-01" "web-01" "web-02")
+
+# print the results to stdout
+displayResults () {
+    echo -e "The subdomain $1 is a $2 record and points to $3"
+}
+
+# dig the domain info
+getInfo () {
+    FQDN="$1"; SUBDOMAIN="$2";
+    ANSWER=$(dig "${FQDN}" | grep -A1 'ANSWER SECTION:' | awk 'NR>1');
+    RECORD_TYPE=$(echo "${ANSWER}" | awk '{print $4}');
+    DESTINATION=$(echo "${ANSWER}" | awk '{print $5}');
+    displayResults "$SUBDOMAIN" "$RECORD_TYPE" "$DESTINATION";
+}
+
+getSubs () {
+    for sub in "${subs[@]}"; do
+        getInfo "${sub}.${domain}" "${sub}";
+    done
+}
+
+# Check if subdomains are proovided
+if [ "$#" -eq 1 ]; then
+    getSubs
+    exit 0;
+fi
+
+# display the specific domain if no other info is provided
+getInfo "${subdomain}.${domain}" "${subdomain}";
