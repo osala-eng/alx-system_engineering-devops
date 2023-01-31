@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Install ufw and block all incoming except 22, 443, 80
+
+# install ufw, deny all incomming, allow all outgoing
+# enable both A and AAAA traffic
+sudo apt-get -y install ufw
+sudo sed -i "s/IPV6=no/IPV6=yes/" /etc/default/ufw
+sudo ufw default allow outgoing
+sudo ufw default deny incoming
+
+# configure firewall for 80, 443 and 22
+sudo ufw allow ssh
+sudo ufw allow http
+sudo ufw allow https
+
+# enable ufw
+sudo ufw enable
