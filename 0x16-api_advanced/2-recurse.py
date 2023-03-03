@@ -20,6 +20,8 @@ def recurse(subreddit, hot_list=[], after="tmp"):
 
     results = r.json().get('data', {}).get('children', [])
     if not results:
+        if after == "tmp":
+            return None
         return hot_list
     for e in results:
         hot_list.append(e.get('data').get('title'))
